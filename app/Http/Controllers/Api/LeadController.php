@@ -23,7 +23,7 @@ class LeadController extends Controller
         $new_lead = Lead::create($data);
 
         //? INVIO DELLE MAIL
-        Mail::to('no-reply@boolpress.it')->send(new NewContact($new_lead));
+        Mail::to('info@boolfolio.it')->send(new NewContact($new_lead));
 
         //? OTTENERE UNA RISPOSTA POSITIVA IN JSON
         return response()->json(
